@@ -1,0 +1,88 @@
+<div>
+  <h5>Student Data</h5>
+  <p>
+    Student name: {{ firstName }}<br />
+    Student Id : {{ id }}<br />
+    Student city : {{ cityName }}
+  </p>
+</div>
+*****************************************************************
+<br />
+**************************************************************
+<br />
+<br />
+<button *ngIf="showStudentTable == false" (click)="display()">ShowTable</button>
+<button *ngIf="showStudentTable == true" (click)="display()">HideTable</button>
+<table
+  *ngIf="showStudentTable == true"
+  class="table table-bordered"
+  style="width: 50%"
+>
+  <tr>
+    <td class="col-md-6">
+      <label>Student Name</label>
+    </td>
+    <td>
+      {{ firstName }}
+    </td>
+  </tr>
+  <tr>
+    <td class="col-md-6">
+      <label> Student Id </label>
+    </td>
+    <td>
+      {{ id }}
+    </td>
+  </tr>
+  <tr>
+    <td class="col-md-6">
+      <label> Student City</label>
+    </td>
+    <td>
+      {{ cityName }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>Student Image</label>
+    </td>
+    <td>
+      <img [src]="imagePath" alt="" />
+    </td>
+  </tr>
+  <tr>
+    <td>Student State</td>
+    <td>
+      <select>
+        <option>Andhrapradesh</option>
+        <option>Bihar</option>
+        <option>Maharashtra</option>
+        <option>Maharashtra</option>
+        <option>Madhyapradesh</option>
+        <option>Gujrat</option>
+        <option>Karnataka</option>
+        <option>Tamilnadu</option>
+        <option>Aasam</option>
+        <option>Kerala</option>
+        <option>JK</option>
+        <option>Maharashtra 1</option>
+        <option>Maharashtra 2</option>
+        <option>Maharashtra 3</option>
+        <option>Maharashtra 4</option>
+        <option>Maharashtra 5</option>
+        <option>Maharashtra 6</option>
+        <option>Maharashtra 7</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>state using ngFor</label>
+    </td>
+    <td>
+      <select>
+        <option *ngFor="let i of stateArray">{{ i }}</option>
+      </select>
+    </td>
+  </tr>
+</table>

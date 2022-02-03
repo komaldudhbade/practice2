@@ -1,0 +1,96 @@
+<div>
+    <button *ngIf="showCustomerDetails==false" (click)="display()">ShowTable</button>
+    <button *ngIf="showCustomerDetails==true" (click)="display()">HideTable</button>
+    <table *ngIf="showCustomerDetails==true" class="table table-bordered" style="width:50%">
+<tr>
+    <td class="col-md-6">
+        <label>Customer First Name </label>
+    </td>
+    <td>
+        {{firstName}}
+    </td>
+</tr>
+<tr>
+<td class="col-md-6">
+    <label>Customer Last Name </label>
+</td>
+<td>
+    {{lastName}}
+</td>
+</tr>
+<tr>
+    <td>
+        <label >Customer Age</label>
+    </td>
+    <td>
+        {{age}}
+    </td>
+</tr>
+<tr>
+    <td>
+        <label> Customer Address</label>
+    </td>
+    <td>
+        {{address}}
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>Customer Email Id</label>
+    </td>
+    <td>
+        {{emailId}}
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>Customer Id</label>
+    </td>
+    <td>
+        {{customerId}}
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>Customer Account Number</label>
+    </td>
+    <td>
+        {{accountNumber}}
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>Customer Mobile Number</label>
+    </td>
+    <td>
+        {{customerMobileNo}}
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>Customer Image</label>
+    </td>
+    <td>
+        <img [src]="imagePath">
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>Customer Location</label>
+    </td>
+    <td>
+        <select>
+            <option *ngFor="let location of customerLocation">{{location}} </option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td>
+        <label>Customer Amount</label>
+    </td>
+    <td>
+        {{amount | indianCurrency}}
+    </td>
+</tr>
+    </table>
+</div>

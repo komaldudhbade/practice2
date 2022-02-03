@@ -1,0 +1,86 @@
+<div>
+  <button *ngIf="showVehicalInfo == false" (click)="display()">ShowInfo</button>
+  <button *ngIf="showVehicalInfo == true" (click)="display()">HideInfo</button>
+  <table
+    *ngIf="showVehicalInfo == true"
+    class="table table-bordered"
+    style="width: 50%"
+  >
+    <tr>
+      <td>
+        <label> Car Name</label>
+      </td>
+      <td>
+        {{ carName }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Car Maker</label>
+      </td>
+      <td>
+        {{ maker }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label> Car Type</label>
+      </td>
+      <td>
+        {{ type }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Car Weight</label>
+      </td>
+      <td>
+        {{ weight }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Car Engine Power</label>
+      </td>
+      <td>
+        {{ enginePower }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label> Car Fuel Type</label>
+      </td>
+      <td>
+        {{ fuelType }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Car Max Speed</label>
+      </td>
+      <td>
+        {{ maxSpeed | speed:'m' }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Car Image</label>
+      </td>
+      <td>
+        <img [src]="imagePath" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label> Car Variants</label>
+      </td>
+      <td>
+        <select>
+          <option *ngFor="let carvarients of variants">
+            {{ carvarients }}
+          </option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</div>

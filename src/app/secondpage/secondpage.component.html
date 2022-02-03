@@ -1,0 +1,70 @@
+<div>
+  <h5>Fruit Data</h5>
+  <p>
+    fruit Name:{{ fruitName }}<br />
+    color : {{ fruitColor }}<br />
+    weight :{{ weight }}<br />
+    prize : {{ prize }}
+  </p>
+</div>
+**************************************************************************
+<br />
+<br />
+<button *ngIf="showFruitTable == false" (click)="display()">ShowTable</button>
+<button *ngIf="showFruitTable == true" (click)="display()">HideTable</button>
+<table
+  *ngIf="showFruitTable == true"
+  class="table table-bordered"
+  style="width: 50%"
+>
+  <tr>
+    <td class="col-md-6">
+      <label>Fruit Name </label>
+    </td>
+    <td>
+      {{ fruitName }}
+    </td>
+  </tr>
+  <tr>
+    <td class="col-md-6">
+      <label>color</label>
+    </td>
+    <td>
+      {{ fruitColor }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>Weight </label>
+    </td>
+    <td>
+      {{ weight }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>Prize</label>
+    </td>
+    <td>
+      {{ prize }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>Image</label>
+    </td>
+    <td>
+      <img [src]="image" [width]="width" [height]="height" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label>availnInState</label>
+    </td>
+    <td>
+      <select>
+        <option *ngFor="let i of availnInState">{{ i }}</option>
+      </select>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <td><input type="number" [(ngModel)]="firstInput" /></td>
+    <td><input type="number" [(ngModel)]="secondInput"></td>
+    <td>={{result}}</td>
+  </tr>
+  <tr>
+      <td><button (click)="addition()">addition</button></td> 
+      <td><button (click)="substraction()">substraction</button></td>
+  </tr>
+  <tr>
+      <td><button (click)="multiplication()">multiplication</button></td>
+      <td><button (click)="division()">division</button></td>
+  </tr>
+</table>
