@@ -4,6 +4,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { FirstpageComponent } from './firstpage/firstpage.component';
 import { ForthpageComponent } from './forthpage/forthpage.component';
 import { ObjectcompComponent } from './objectcomp/objectcomp.component';
+import { PipepracticeComponent } from './pipepractice/pipepractice.component';
 import { SecondpageComponent } from './secondpage/secondpage.component';
 import { ThirdpageComponent } from './thirdpage/thirdpage.component';
 
@@ -32,6 +33,9 @@ const routes: Routes = [
     path: 'objectcomp',
     component: ObjectcompComponent,
   },
+  {
+    path:'pipepractice',component:PipepracticeComponent,
+  }
 ];
 
 @NgModule({

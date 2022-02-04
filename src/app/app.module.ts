@@ -13,6 +13,7 @@ import { SpeedPipe } from './speed.pipe';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { FormsModule } from '@angular/forms';
 import { ObjectcompComponent } from './objectcomp/objectcomp.component';
+import { PipepracticeComponent } from './pipepractice/pipepractice.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ObjectcompComponent } from './objectcomp/objectcomp.component';
     ForthpageComponent,
     SpeedPipe,
     CalculatorComponent,
-    ObjectcompComponent
+    ObjectcompComponent,
+    PipepracticeComponent
   ],
   imports: [
     BrowserModule,
